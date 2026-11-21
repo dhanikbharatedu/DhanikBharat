@@ -29,32 +29,30 @@
     --day-text: #8a5b00;
 }
 
-* {
-    box-sizing: border-box;
-}
+* { box-sizing: border-box; }
+html { width: 100%; overflow-x: hidden; }
 
 body {
     margin: 0;
-    padding: 28px 14px;
+    width: 100%;
+    padding: 32px;
     font-family: 'Poppins', sans-serif;
     color: var(--text);
-    background: #f5f7f9;
+    background: #f3f6f8;
 }
 
 .container {
     width: 100%;
-    max-width: 780px;
+    max-width: 1440px;
     margin: 0 auto;
-    padding: 30px;
+    padding: 42px;
     background: #fff;
-    border-radius: 28px;
+    border-radius: 26px;
     border-top: 8px solid var(--orange);
     box-shadow: 0 14px 45px rgba(15, 23, 42, .08);
 }
 
-header {
-    text-align: center;
-}
+header { text-align: center; }
 
 .logo {
     display: block;
@@ -68,12 +66,12 @@ header {
 h1 {
     margin: 0 0 5px;
     color: var(--green);
-    font-size: 32px;
+    font-size: 34px;
     font-weight: 700;
 }
 
 .subtitle {
-    margin: 0 0 25px;
+    margin: 0 0 28px;
     color: var(--muted);
     font-size: 15px;
 }
@@ -84,49 +82,48 @@ h1 {
     justify-content: center;
     gap: 10px;
     width: 100%;
-    margin-bottom: 24px;
-    padding: 17px 14px;
-    border-radius: 18px;
+    margin-bottom: 28px;
+    padding: 19px 16px;
+    border-radius: 16px;
     background: linear-gradient(100deg, #ff7417, #ffc914);
     color: #172033;
     font-size: 19px;
     font-weight: 700;
     text-decoration: none;
-    box-shadow: 0 10px 25px rgba(244, 113, 24, .23);
+    box-shadow: 0 10px 25px rgba(244, 113, 24, .20);
     transition: transform .2s ease;
 }
 
-.cta:hover {
-    transform: translateY(-2px);
-}
+.cta:hover { transform: translateY(-2px); }
 
 .section-title {
-    margin: 30px 0 14px;
+    margin: 34px 0 14px;
     color: var(--green);
-    font-size: 21px;
+    font-size: 23px;
     font-weight: 700;
 }
 
 .section-description {
-    margin: -6px 0 16px;
+    margin: -6px 0 18px;
     color: var(--muted);
-    font-size: 13px;
+    font-size: 14px;
 }
 
+/* SOCIAL MEDIA */
 .links {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 14px;
 }
 
 .link-btn {
     display: flex;
     align-items: center;
     gap: 13px;
-    min-height: 58px;
-    padding: 14px 16px;
+    min-height: 62px;
+    padding: 15px 18px;
     border: 1px solid var(--border);
-    border-radius: 14px;
+    border-radius: 13px;
     background: var(--light);
     color: var(--text);
     font-size: 15px;
@@ -137,23 +134,18 @@ h1 {
 
 .link-btn:hover {
     background: #edf4ef;
-    transform: translateY(-1px);
+    transform: translateY(-2px);
 }
 
 .link-btn i {
-    flex: 0 0 23px;
-    width: 23px;
+    flex: 0 0 24px;
+    width: 24px;
     text-align: center;
     font-size: 21px;
 }
 
-.fa-globe {
-    color: #1687d9;
-}
-
-.fa-facebook-f {
-    color: #1877f2;
-}
+.fa-globe { color: #1687d9; }
+.fa-facebook-f { color: #1877f2; }
 
 .fa-instagram {
     background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
@@ -162,44 +154,21 @@ h1 {
     -webkit-text-fill-color: transparent;
 }
 
-.fa-youtube {
-    color: #ff0000;
-}
-
-.fa-x-twitter {
-    color: #000;
-}
-
-.fa-linkedin-in {
-    color: #0a66c2;
-}
-
-.fa-whatsapp {
-    color: #25d366;
-}
-
-.fa-bullhorn {
-    color: var(--orange);
-}
-
-.fa-apple {
-    color: #111827;
-}
-
-.fa-google-play {
-    color: #18a058;
-}
-
+.fa-youtube { color: #ff0000; }
+.fa-x-twitter { color: #000; }
+.fa-linkedin-in { color: #0a66c2; }
+.fa-whatsapp { color: #25d366; }
+.fa-bullhorn { color: var(--orange); }
+.fa-apple { color: #111827; }
+.fa-google-play { color: #18a058; }
 .fa-graduation-cap,
-.fa-location-dot {
-    color: var(--orange);
-}
+.fa-location-dot { color: var(--orange); }
 
-/* Student / Parent App */
+/* STUDENT / PARENT APP */
 .app-links {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
 }
 
 .app-btn {
@@ -207,61 +176,56 @@ h1 {
     align-items: center;
     justify-content: center;
     gap: 12px;
-    padding: 16px 12px;
+    min-height: 68px;
+    padding: 16px;
     border-radius: 14px;
     background: var(--green);
     color: #fff;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 600;
     transition: opacity .2s ease;
 }
 
-.app-btn:hover {
-    opacity: .88;
-}
-
-.app-btn i {
-    font-size: 26px;
-}
+.app-btn:hover { opacity: .88; }
+.app-btn i { font-size: 28px; }
 
 .app-btn small {
     display: block;
-    font-size: 10px;
+    font-size: 11px;
     font-weight: 400;
     opacity: .9;
 }
 
-/* Campus directory */
-.location-group {
-    margin-top: 24px;
-}
+/* CAMPUS DIRECTORY */
+.location-group { margin-top: 30px; }
 
 .location-heading {
     display: flex;
     align-items: center;
     gap: 10px;
-    margin: 0 0 14px;
-    padding-bottom: 10px;
+    margin: 0 0 16px;
+    padding-bottom: 12px;
     border-bottom: 2px solid #e8eee9;
     color: var(--green);
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 700;
 }
 
 .location-heading i {
     color: var(--orange);
-    font-size: 21px;
+    font-size: 22px;
 }
 
 .branch-list {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
 }
 
 .branch {
-    padding: 15px;
+    min-width: 0;
+    padding: 19px;
     border: 1px solid var(--border);
     border-radius: 14px;
     background: #fbfcfd;
@@ -271,33 +235,33 @@ h1 {
 
 .branch:hover {
     border-color: #a5cd39;
-    transform: translateY(-1px);
+    transform: translateY(-2px);
 }
 
 .branch-campus {
     display: flex;
     align-items: flex-start;
-    gap: 9px;
-    margin-bottom: 8px;
+    gap: 10px;
+    margin-bottom: 9px;
     color: var(--green);
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 700;
     line-height: 1.6;
 }
 
 .branch-campus i {
-    flex: 0 0 15px;
+    flex: 0 0 16px;
     margin-top: 4px;
     color: var(--orange);
-    font-size: 14px;
+    font-size: 15px;
 }
 
 .branch-type {
     display: block;
-    padding-left: 24px;
+    padding-left: 26px;
     color: #526174;
-    font-size: 12px;
-    line-height: 1.75;
+    font-size: 13px;
+    line-height: 1.8;
 }
 
 .branch-type strong {
@@ -305,15 +269,15 @@ h1 {
     font-weight: 600;
 }
 
-/* Campus category highlights */
+/* CAMPUS CATEGORY */
 .campus-gender {
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    margin: 9px 0 0 24px;
-    padding: 5px 10px;
+    margin: 10px 0 0 26px;
+    padding: 6px 11px;
     border-radius: 20px;
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 700;
 }
 
@@ -335,20 +299,18 @@ h1 {
     border: 1px solid #f1d99b;
 }
 
-.campus-gender i {
-    font-size: 12px;
-}
+.campus-gender i { font-size: 12px; }
 
 .divider {
-    margin: 28px 0 20px;
+    margin: 34px 0 24px;
     border: 0;
     border-top: 1px solid var(--border);
 }
 
-/* Contact details */
+/* CONTACT */
 .contact {
-    font-size: 14px;
-    line-height: 1.8;
+    font-size: 15px;
+    line-height: 1.9;
     overflow-wrap: anywhere;
 }
 
@@ -362,56 +324,99 @@ h1 {
     font-weight: 700;
 }
 
-.address-block {
-    margin-top: 20px;
-}
+.address-block { margin-top: 22px; }
 
 .footer {
-    margin-top: 26px;
-    padding-top: 16px;
+    margin-top: 30px;
+    padding-top: 18px;
     border-top: 1px solid var(--border);
     text-align: center;
     color: var(--muted);
-    font-size: 12px;
+    font-size: 13px;
 }
 
-/* Mobile responsive layout */
-@media (max-width: 520px) {
-    body {
-        padding: 12px 8px;
-    }
+/* TABLET */
+@media (min-width: 641px) and (max-width: 1024px) {
+    body { padding: 22px; }
 
     .container {
-        padding: 24px 16px;
-        border-radius: 20px;
+        max-width: 100%;
+        padding: 30px;
+    }
+
+    .links,
+    .branch-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .section-title { font-size: 21px; }
+}
+
+/* MOBILE */
+@media (max-width: 640px) {
+    body { padding: 10px; }
+
+    .container {
+        width: 100%;
+        max-width: 100%;
+        padding: 22px 15px;
+        border-radius: 18px;
+        border-top-width: 6px;
     }
 
     .logo {
-        max-width: 180px;
-        max-height: 200px;
+        max-width: 165px;
+        max-height: 180px;
     }
 
-    h1 {
-        font-size: 27px;
-    }
+    h1 { font-size: 26px; }
 
     .subtitle {
-        font-size: 13px;
+        font-size: 12px;
+        margin-bottom: 22px;
     }
 
     .cta {
-        font-size: 17px;
+        padding: 15px 10px;
+        font-size: 16px;
+        border-radius: 13px;
+    }
+
+    .section-title {
+        margin: 26px 0 12px;
+        font-size: 19px;
+    }
+
+    .section-description {
+        font-size: 12px;
+        line-height: 1.7;
     }
 
     .links,
     .app-links,
     .branch-list {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 10px;
     }
 
-    .section-title {
-        font-size: 19px;
+    .link-btn {
+        min-height: 55px;
+        padding: 12px 14px;
+        font-size: 14px;
     }
+
+    .app-btn {
+        min-height: 60px;
+        font-size: 14px;
+    }
+
+    .location-group { margin-top: 24px; }
+    .location-heading { font-size: 19px; }
+    .branch { padding: 15px; }
+    .branch-campus { font-size: 13px; }
+    .branch-type { font-size: 12px; }
+    .contact { font-size: 13px; }
+    .footer { font-size: 11px; }
 }
 </style>
 </head>
@@ -426,7 +431,6 @@ h1 {
         alt="Dhanik Bharat Educational Institutions Logo"
         class="logo"
     >
-
     <h1>Dhanik Bharat</h1>
     <p class="subtitle">Educational Institutions • Official Links</p>
 </header>
