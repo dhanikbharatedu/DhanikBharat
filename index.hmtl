@@ -33,21 +33,28 @@
     box-sizing: border-box;
 }
 
-body {
-    margin: 0;
-    padding: 36px 24px;
-    font-family: 'Poppins', sans-serif;
-    color: var(--text);
-    background: #f5f7f9;
+html {
+    width: 100%;
+    overflow-x: hidden;
 }
 
+body {
+    margin: 0;
+    padding: 32px;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    color: var(--text);
+    background: #f3f6f8;
+}
+
+/* MAIN WEBSITE CONTAINER */
 .container {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1440px;
     margin: 0 auto;
-    padding: 40px;
-    background: #fff;
-    border-radius: 28px;
+    padding: 42px;
+    background: #ffffff;
+    border-radius: 26px;
     border-top: 8px solid var(--orange);
     box-shadow: 0 14px 45px rgba(15, 23, 42, .08);
 }
@@ -68,31 +75,32 @@ header {
 h1 {
     margin: 0 0 5px;
     color: var(--green);
-    font-size: 32px;
+    font-size: 34px;
     font-weight: 700;
 }
 
 .subtitle {
-    margin: 0 0 25px;
+    margin: 0 0 28px;
     color: var(--muted);
     font-size: 15px;
 }
 
+/* ADMISSIONS BUTTON */
 .cta {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
     width: 100%;
-    margin-bottom: 24px;
-    padding: 17px 14px;
-    border-radius: 18px;
+    margin-bottom: 28px;
+    padding: 19px 16px;
+    border-radius: 16px;
     background: linear-gradient(100deg, #ff7417, #ffc914);
     color: #172033;
     font-size: 19px;
     font-weight: 700;
     text-decoration: none;
-    box-shadow: 0 10px 25px rgba(244, 113, 24, .23);
+    box-shadow: 0 10px 25px rgba(244, 113, 24, .20);
     transition: transform .2s ease;
 }
 
@@ -100,22 +108,24 @@ h1 {
     transform: translateY(-2px);
 }
 
+/* SECTION HEADINGS */
 .section-title {
-    margin: 30px 0 14px;
+    margin: 34px 0 14px;
     color: var(--green);
-    font-size: 21px;
+    font-size: 23px;
     font-weight: 700;
 }
 
 .section-description {
-    margin: -6px 0 16px;
+    margin: -6px 0 18px;
     color: var(--muted);
-    font-size: 13px;
+    font-size: 14px;
 }
 
+/* SOCIAL MEDIA GRID */
 .links {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 14px;
 }
 
@@ -123,10 +133,10 @@ h1 {
     display: flex;
     align-items: center;
     gap: 13px;
-    min-height: 58px;
-    padding: 14px 16px;
+    min-height: 62px;
+    padding: 15px 18px;
     border: 1px solid var(--border);
-    border-radius: 14px;
+    border-radius: 13px;
     background: var(--light);
     color: var(--text);
     font-size: 15px;
@@ -137,12 +147,12 @@ h1 {
 
 .link-btn:hover {
     background: #edf4ef;
-    transform: translateY(-1px);
+    transform: translateY(-2px);
 }
 
 .link-btn i {
-    flex: 0 0 23px;
-    width: 23px;
+    flex: 0 0 24px;
+    width: 24px;
     text-align: center;
     font-size: 21px;
 }
@@ -170,11 +180,11 @@ h1 {
     color: var(--orange);
 }
 
-/* Student / Parent App */
+/* STUDENT / PARENT APP */
 .app-links {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
 }
 
 .app-btn {
@@ -182,12 +192,13 @@ h1 {
     align-items: center;
     justify-content: center;
     gap: 12px;
-    padding: 16px 12px;
+    min-height: 68px;
+    padding: 16px;
     border-radius: 14px;
     background: var(--green);
     color: #fff;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 600;
     transition: opacity .2s ease;
 }
@@ -197,46 +208,47 @@ h1 {
 }
 
 .app-btn i {
-    font-size: 26px;
+    font-size: 28px;
 }
 
 .app-btn small {
     display: block;
-    font-size: 10px;
+    font-size: 11px;
     font-weight: 400;
     opacity: .9;
 }
 
-/* Campus directory */
+/* CAMPUS DIRECTORY */
 .location-group {
-    margin-top: 24px;
+    margin-top: 30px;
 }
 
 .location-heading {
     display: flex;
     align-items: center;
     gap: 10px;
-    margin: 0 0 14px;
-    padding-bottom: 10px;
+    margin: 0 0 16px;
+    padding-bottom: 12px;
     border-bottom: 2px solid #e8eee9;
     color: var(--green);
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 700;
 }
 
 .location-heading i {
     color: var(--orange);
-    font-size: 21px;
+    font-size: 22px;
 }
 
 .branch-list {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 14px;
+    gap: 16px;
 }
 
 .branch {
-    padding: 15px;
+    min-width: 0;
+    padding: 19px;
     border: 1px solid var(--border);
     border-radius: 14px;
     background: #fbfcfd;
@@ -246,33 +258,33 @@ h1 {
 
 .branch:hover {
     border-color: #a5cd39;
-    transform: translateY(-1px);
+    transform: translateY(-2px);
 }
 
 .branch-campus {
     display: flex;
     align-items: flex-start;
-    gap: 9px;
-    margin-bottom: 8px;
+    gap: 10px;
+    margin-bottom: 9px;
     color: var(--green);
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 700;
     line-height: 1.6;
 }
 
 .branch-campus i {
-    flex: 0 0 15px;
+    flex: 0 0 16px;
     margin-top: 4px;
     color: var(--orange);
-    font-size: 14px;
+    font-size: 15px;
 }
 
 .branch-type {
     display: block;
-    padding-left: 24px;
+    padding-left: 26px;
     color: #526174;
-    font-size: 12px;
-    line-height: 1.75;
+    font-size: 13px;
+    line-height: 1.8;
 }
 
 .branch-type strong {
@@ -280,15 +292,15 @@ h1 {
     font-weight: 600;
 }
 
-/* Campus category highlights */
+/* CAMPUS CATEGORY */
 .campus-gender {
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    margin: 9px 0 0 24px;
-    padding: 5px 10px;
+    margin: 10px 0 0 26px;
+    padding: 6px 11px;
     border-radius: 20px;
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 700;
 }
 
@@ -314,16 +326,16 @@ h1 {
     font-size: 12px;
 }
 
+/* CONTACT */
 .divider {
-    margin: 28px 0 20px;
+    margin: 34px 0 24px;
     border: 0;
     border-top: 1px solid var(--border);
 }
 
-/* Contact details */
 .contact {
-    font-size: 14px;
-    line-height: 1.8;
+    font-size: 15px;
+    line-height: 1.9;
     overflow-wrap: anywhere;
 }
 
@@ -338,26 +350,42 @@ h1 {
 }
 
 .address-block {
-    margin-top: 20px;
+    margin-top: 22px;
 }
 
 .footer {
-    margin-top: 26px;
-    padding-top: 16px;
+    margin-top: 30px;
+    padding-top: 18px;
     border-top: 1px solid var(--border);
     text-align: center;
     color: var(--muted);
-    font-size: 12px;
+    font-size: 13px;
 }
 
-/* Tablet layout */
-@media (min-width: 521px) and (max-width: 900px) {
+/* LARGE DESKTOP SCREENS */
+@media (min-width: 1500px) {
+    .container {
+        max-width: 1500px;
+        padding: 48px;
+    }
+
+    .links {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .branch-list {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+/* TABLET */
+@media (min-width: 641px) and (max-width: 1024px) {
     body {
-        padding: 24px 16px;
+        padding: 22px;
     }
 
     .container {
-        max-width: 900px;
+        max-width: 100%;
         padding: 30px;
     }
 
@@ -365,44 +393,100 @@ h1 {
     .branch-list {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
+
+    .section-title {
+        font-size: 21px;
+    }
 }
 
-/* Mobile responsive layout */
-@media (max-width: 520px) {
+/* MOBILE */
+@media (max-width: 640px) {
     body {
-        padding: 12px 8px;
+        padding: 10px;
     }
 
     .container {
-        padding: 24px 16px;
-        border-radius: 20px;
+        width: 100%;
+        max-width: 100%;
+        padding: 22px 15px;
+        border-radius: 18px;
+        border-top-width: 6px;
     }
 
     .logo {
-        max-width: 180px;
-        max-height: 200px;
+        max-width: 165px;
+        max-height: 180px;
     }
 
     h1 {
-        font-size: 27px;
+        font-size: 26px;
     }
 
     .subtitle {
-        font-size: 13px;
+        font-size: 12px;
+        margin-bottom: 22px;
     }
 
     .cta {
-        font-size: 17px;
+        padding: 15px 10px;
+        font-size: 16px;
+        border-radius: 13px;
+    }
+
+    .section-title {
+        margin: 26px 0 12px;
+        font-size: 19px;
+    }
+
+    .section-description {
+        font-size: 12px;
+        line-height: 1.7;
     }
 
     .links,
     .app-links,
     .branch-list {
         grid-template-columns: 1fr;
+        gap: 10px;
     }
 
-    .section-title {
+    .link-btn {
+        min-height: 55px;
+        padding: 12px 14px;
+        font-size: 14px;
+    }
+
+    .app-btn {
+        min-height: 60px;
+        font-size: 14px;
+    }
+
+    .location-group {
+        margin-top: 24px;
+    }
+
+    .location-heading {
         font-size: 19px;
+    }
+
+    .branch {
+        padding: 15px;
+    }
+
+    .branch-campus {
+        font-size: 13px;
+    }
+
+    .branch-type {
+        font-size: 12px;
+    }
+
+    .contact {
+        font-size: 13px;
+    }
+
+    .footer {
+        font-size: 11px;
     }
 }
 </style>
@@ -413,82 +497,56 @@ h1 {
 
 <!-- HEADER -->
 <header>
-    <img
-        src="logo.png"
-        alt="Dhanik Bharat Educational Institutions Logo"
-        class="logo"
-    >
+    <img src="logo.png"
+         alt="Dhanik Bharat Educational Institutions Logo"
+         class="logo">
 
     <h1>Dhanik Bharat</h1>
     <p class="subtitle">Educational Institutions • Official Links</p>
 </header>
 
-<!-- ADMISSIONS CTA -->
+<!-- ADMISSIONS -->
 <a class="cta" href="https://dhanikbharat.org/#enquiry-form">
     <i class="fa-solid fa-graduation-cap"></i>
     Admissions Open 2027–2028
 </a>
 
-<!-- OFFICIAL SOCIAL MEDIA LINKS -->
+<!-- SOCIAL MEDIA -->
 <section aria-label="Official social media links">
     <h2 class="section-title">Connect With Us</h2>
 
     <div class="links">
 
-        <a class="link-btn"
-           href="https://dhanikbharat.org/"
-           target="_blank" rel="noopener noreferrer">
-            <i class="fa-solid fa-globe"></i>
-            Visit Website
+        <a class="link-btn" href="https://dhanikbharat.org/" target="_blank" rel="noopener noreferrer">
+            <i class="fa-solid fa-globe"></i> Visit Website
         </a>
 
-        <a class="link-btn"
-           href="https://www.facebook.com/profile.php?id=61584293831919"
-           target="_blank" rel="noopener noreferrer">
-            <i class="fa-brands fa-facebook-f"></i>
-            Facebook
+        <a class="link-btn" href="https://www.facebook.com/profile.php?id=61584293831919" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-facebook-f"></i> Facebook
         </a>
 
-        <a class="link-btn"
-           href="https://www.instagram.com/dhanikbharatedu/?hl=en"
-           target="_blank" rel="noopener noreferrer">
-            <i class="fa-brands fa-instagram"></i>
-            Instagram
+        <a class="link-btn" href="https://www.instagram.com/dhanikbharatedu/?hl=en" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-instagram"></i> Instagram
         </a>
 
-        <a class="link-btn"
-           href="https://www.youtube.com/@dhanikbharat-edu"
-           target="_blank" rel="noopener noreferrer">
-            <i class="fa-brands fa-youtube"></i>
-            YouTube
+        <a class="link-btn" href="https://www.youtube.com/@dhanikbharat-edu" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-youtube"></i> YouTube
         </a>
 
-        <a class="link-btn"
-           href="https://x.com/dhanikbharatedu"
-           target="_blank" rel="noopener noreferrer">
-            <i class="fa-brands fa-x-twitter"></i>
-            Twitter (X)
+        <a class="link-btn" href="https://x.com/dhanikbharatedu" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-x-twitter"></i> Twitter (X)
         </a>
 
-        <a class="link-btn"
-           href="https://www.linkedin.com/company/dhanikbharat/"
-           target="_blank" rel="noopener noreferrer">
-            <i class="fa-brands fa-linkedin-in"></i>
-            LinkedIn
+        <a class="link-btn" href="https://www.linkedin.com/company/dhanikbharat/" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-linkedin-in"></i> LinkedIn
         </a>
 
-        <a class="link-btn"
-           href="https://api.whatsapp.com/send/?phone=919555825559"
-           target="_blank" rel="noopener noreferrer">
-            <i class="fa-brands fa-whatsapp"></i>
-            WhatsApp Support
+        <a class="link-btn" href="https://api.whatsapp.com/send/?phone=919555825559" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-whatsapp"></i> WhatsApp Support
         </a>
 
-        <a class="link-btn"
-           href="https://whatsapp.com/channel/0029Vb75B9Y5kg72eCv86T0Z"
-           target="_blank" rel="noopener noreferrer">
-            <i class="fa-solid fa-bullhorn"></i>
-            WhatsApp Channel
+        <a class="link-btn" href="https://whatsapp.com/channel/0029Vb75B9Y5kg72eCv86T0Z" target="_blank" rel="noopener noreferrer">
+            <i class="fa-solid fa-bullhorn"></i> WhatsApp Channel
         </a>
 
     </div>
@@ -496,7 +554,6 @@ h1 {
 
 <!-- STUDENT / PARENT APP -->
 <section aria-label="Student and Parent App">
-
     <h2 class="section-title">Student / Parent App</h2>
 
     <p class="section-description">
@@ -505,24 +562,16 @@ h1 {
 
     <div class="app-links">
 
-        <a class="app-btn"
-           href="https://apps.apple.com/us/app/dhanik-bharat-institutions/id6770435192"
-           target="_blank" rel="noopener noreferrer">
-
+        <a class="app-btn" href="https://apps.apple.com/us/app/dhanik-bharat-institutions/id6770435192" target="_blank" rel="noopener noreferrer">
             <i class="fa-brands fa-apple"></i>
-
             <span>
                 <small>DOWNLOAD ON THE</small>
                 App Store (iOS)
             </span>
         </a>
 
-        <a class="app-btn"
-           href="https://play.google.com/store/apps/details?id=com.mcb.dhanikbharateducationalsociety"
-           target="_blank" rel="noopener noreferrer">
-
+        <a class="app-btn" href="https://play.google.com/store/apps/details?id=com.mcb.dhanikbharateducationalsociety" target="_blank" rel="noopener noreferrer">
             <i class="fa-brands fa-google-play"></i>
-
             <span>
                 <small>GET IT ON</small>
                 Google Play (Android)
@@ -543,110 +592,52 @@ h1 {
 
     <!-- HYDERABAD -->
     <div class="location-group">
-
         <h3 class="location-heading">
-            <i class="fa-solid fa-location-dot"></i>
-            Hyderabad
+            <i class="fa-solid fa-location-dot"></i> Hyderabad
         </h3>
 
         <div class="branch-list">
 
             <div class="branch">
-                <span class="branch-campus">
-                    <i class="fa-solid fa-location-dot"></i>
-                    Harvard Campus - MADHAPUR
-                </span>
-                <span class="branch-type">
-                    <strong>Campus Type:</strong> Residential Campus
-                </span>
-                <span class="campus-gender boys">
-                    <i class="fa-solid fa-person"></i>
-                    Boys Campus
-                </span>
+                <span class="branch-campus"><i class="fa-solid fa-location-dot"></i> Harvard Campus - MADHAPUR</span>
+                <span class="branch-type"><strong>Campus Type:</strong> Residential Campus</span>
+                <span class="campus-gender boys"><i class="fa-solid fa-person"></i> Boys Campus</span>
             </div>
 
             <div class="branch">
-                <span class="branch-campus">
-                    <i class="fa-solid fa-location-dot"></i>
-                    MIT Campus - MADHAPUR
-                </span>
-                <span class="branch-type">
-                    <strong>Campus Type:</strong> Residential Campus
-                </span>
-                <span class="campus-gender boys">
-                    <i class="fa-solid fa-person"></i>
-                    Boys Campus
-                </span>
+                <span class="branch-campus"><i class="fa-solid fa-location-dot"></i> MIT Campus - MADHAPUR</span>
+                <span class="branch-type"><strong>Campus Type:</strong> Residential Campus</span>
+                <span class="campus-gender boys"><i class="fa-solid fa-person"></i> Boys Campus</span>
             </div>
 
             <div class="branch">
-                <span class="branch-campus">
-                    <i class="fa-solid fa-location-dot"></i>
-                    Caltech Campus - BONGULURU
-                </span>
-                <span class="branch-type">
-                    <strong>Campus Type:</strong> Residential Campus
-                </span>
-                <span class="campus-gender boys">
-                    <i class="fa-solid fa-person"></i>
-                    Boys Campus
-                </span>
+                <span class="branch-campus"><i class="fa-solid fa-location-dot"></i> Caltech Campus - BONGULURU</span>
+                <span class="branch-type"><strong>Campus Type:</strong> Residential Campus</span>
+                <span class="campus-gender boys"><i class="fa-solid fa-person"></i> Boys Campus</span>
             </div>
 
             <div class="branch">
-                <span class="branch-campus">
-                    <i class="fa-solid fa-location-dot"></i>
-                    Stanford Campus - MADHAPUR
-                </span>
-                <span class="branch-type">
-                    <strong>Campus Type:</strong> Residential Campus
-                </span>
-                <span class="campus-gender girls">
-                    <i class="fa-solid fa-person-dress"></i>
-                    Girls Campus
-                </span>
+                <span class="branch-campus"><i class="fa-solid fa-location-dot"></i> Stanford Campus - MADHAPUR</span>
+                <span class="branch-type"><strong>Campus Type:</strong> Residential Campus</span>
+                <span class="campus-gender girls"><i class="fa-solid fa-person-dress"></i> Girls Campus</span>
             </div>
 
             <div class="branch">
-                <span class="branch-campus">
-                    <i class="fa-solid fa-location-dot"></i>
-                    Boston Campus - MADINAGUDA
-                </span>
-                <span class="branch-type">
-                    <strong>Campus Type:</strong> Day Scholar Campus
-                </span>
-                <span class="campus-gender day">
-                    <i class="fa-solid fa-sun"></i>
-                    Day Scholar
-                </span>
+                <span class="branch-campus"><i class="fa-solid fa-location-dot"></i> Boston Campus - MADINAGUDA</span>
+                <span class="branch-type"><strong>Campus Type:</strong> Day Scholar Campus</span>
+                <span class="campus-gender day"><i class="fa-solid fa-sun"></i> Day Scholar</span>
             </div>
 
             <div class="branch">
-                <span class="branch-campus">
-                    <i class="fa-solid fa-location-dot"></i>
-                    Michigan Campus - KUKATPALLY
-                </span>
-                <span class="branch-type">
-                    <strong>Campus Type:</strong> Day Scholar Campus
-                </span>
-                <span class="campus-gender day">
-                    <i class="fa-solid fa-sun"></i>
-                    Day Scholar
-                </span>
+                <span class="branch-campus"><i class="fa-solid fa-location-dot"></i> Michigan Campus - KUKATPALLY</span>
+                <span class="branch-type"><strong>Campus Type:</strong> Day Scholar Campus</span>
+                <span class="campus-gender day"><i class="fa-solid fa-sun"></i> Day Scholar</span>
             </div>
 
             <div class="branch">
-                <span class="branch-campus">
-                    <i class="fa-solid fa-location-dot"></i>
-                    Cornell Campus - LBNAGAR
-                </span>
-                <span class="branch-type">
-                    <strong>Campus Type:</strong> Day Scholar / Semi-Residential Campus
-                </span>
-                <span class="campus-gender day">
-                    <i class="fa-solid fa-house"></i>
-                    Day / Semi-Residential
-                </span>
+                <span class="branch-campus"><i class="fa-solid fa-location-dot"></i> Cornell Campus - LBNAGAR</span>
+                <span class="branch-type"><strong>Campus Type:</strong> Day Scholar / Semi-Residential Campus</span>
+                <span class="campus-gender day"><i class="fa-solid fa-house"></i> Day / Semi-Residential</span>
             </div>
 
         </div>
@@ -654,56 +645,28 @@ h1 {
 
     <!-- VIJAYAWADA -->
     <div class="location-group">
-
         <h3 class="location-heading">
-            <i class="fa-solid fa-location-dot"></i>
-            Vijayawada
+            <i class="fa-solid fa-location-dot"></i> Vijayawada
         </h3>
 
         <div class="branch-list">
 
             <div class="branch">
-                <span class="branch-campus">
-                    <i class="fa-solid fa-location-dot"></i>
-                    Harvard Campus - RAMAVARAPADU
-                </span>
-                <span class="branch-type">
-                    <strong>Campus Type:</strong>
-                    Residential / Semi-Residential / Day Scholar Campus
-                </span>
-                <span class="campus-gender boys">
-                    <i class="fa-solid fa-person"></i>
-                    Boys Campus
-                </span>
+                <span class="branch-campus"><i class="fa-solid fa-location-dot"></i> Harvard Campus - RAMAVARAPADU</span>
+                <span class="branch-type"><strong>Campus Type:</strong> Residential / Semi-Residential / Day Scholar Campus</span>
+                <span class="campus-gender boys"><i class="fa-solid fa-person"></i> Boys Campus</span>
             </div>
 
             <div class="branch">
-                <span class="branch-campus">
-                    <i class="fa-solid fa-location-dot"></i>
-                    Stanford Campus - RAMAVARAPADU
-                </span>
-                <span class="branch-type">
-                    <strong>Campus Type:</strong>
-                    Residential / Semi-Residential / Day Scholar Campus
-                </span>
-                <span class="campus-gender girls">
-                    <i class="fa-solid fa-person-dress"></i>
-                    Girls Campus
-                </span>
+                <span class="branch-campus"><i class="fa-solid fa-location-dot"></i> Stanford Campus - RAMAVARAPADU</span>
+                <span class="branch-type"><strong>Campus Type:</strong> Residential / Semi-Residential / Day Scholar Campus</span>
+                <span class="campus-gender girls"><i class="fa-solid fa-person-dress"></i> Girls Campus</span>
             </div>
 
             <div class="branch">
-                <span class="branch-campus">
-                    <i class="fa-solid fa-location-dot"></i>
-                    Boston Campus - LABBIPET
-                </span>
-                <span class="branch-type">
-                    <strong>Campus Type:</strong> Day Scholar / Semi-Residential Campus
-                </span>
-                <span class="campus-gender day">
-                    <i class="fa-solid fa-house"></i>
-                    Day / Semi-Residential
-                </span>
+                <span class="branch-campus"><i class="fa-solid fa-location-dot"></i> Boston Campus - LABBIPET</span>
+                <span class="branch-type"><strong>Campus Type:</strong> Day Scholar / Semi-Residential Campus</span>
+                <span class="campus-gender day"><i class="fa-solid fa-house"></i> Day / Semi-Residential</span>
             </div>
 
         </div>
@@ -711,68 +674,34 @@ h1 {
 
     <!-- GUNTUR -->
     <div class="location-group">
-
         <h3 class="location-heading">
-            <i class="fa-solid fa-location-dot"></i>
-            Guntur
+            <i class="fa-solid fa-location-dot"></i> Guntur
         </h3>
 
         <div class="branch-list">
 
             <div class="branch">
-                <span class="branch-campus">
-                    <i class="fa-solid fa-location-dot"></i>
-                    Harvard Campus - PEDDAPALAKLURU
-                </span>
-                <span class="branch-type">
-                    <strong>Campus Type:</strong> Residential Campus
-                </span>
-                <span class="campus-gender boys">
-                    <i class="fa-solid fa-person"></i>
-                    Boys Campus
-                </span>
+                <span class="branch-campus"><i class="fa-solid fa-location-dot"></i> Harvard Campus - PEDDAPALAKLURU</span>
+                <span class="branch-type"><strong>Campus Type:</strong> Residential Campus</span>
+                <span class="campus-gender boys"><i class="fa-solid fa-person"></i> Boys Campus</span>
             </div>
 
             <div class="branch">
-                <span class="branch-campus">
-                    <i class="fa-solid fa-location-dot"></i>
-                    Stanford Campus - REDDY PALEM
-                </span>
-                <span class="branch-type">
-                    <strong>Campus Type:</strong> Residential Campus
-                </span>
-                <span class="campus-gender girls">
-                    <i class="fa-solid fa-person-dress"></i>
-                    Girls Campus
-                </span>
+                <span class="branch-campus"><i class="fa-solid fa-location-dot"></i> Stanford Campus - REDDY PALEM</span>
+                <span class="branch-type"><strong>Campus Type:</strong> Residential Campus</span>
+                <span class="campus-gender girls"><i class="fa-solid fa-person-dress"></i> Girls Campus</span>
             </div>
 
             <div class="branch">
-                <span class="branch-campus">
-                    <i class="fa-solid fa-location-dot"></i>
-                    Queensland - ASHOKNAGAR
-                </span>
-                <span class="branch-type">
-                    <strong>Campus Type:</strong> Residential Campus
-                </span>
-                <span class="campus-gender girls">
-                    <i class="fa-solid fa-person-dress"></i>
-                    Girls Campus
-                </span>
+                <span class="branch-campus"><i class="fa-solid fa-location-dot"></i> Queensland - ASHOKNAGAR</span>
+                <span class="branch-type"><strong>Campus Type:</strong> Residential Campus</span>
+                <span class="campus-gender girls"><i class="fa-solid fa-person-dress"></i> Girls Campus</span>
             </div>
 
             <div class="branch">
-                <span class="branch-campus">
-                    <i class="fa-solid fa-location-dot"></i>
-                    Boston Campus - ZUDIO BUILDING
-                </span>
-                <span class="branch-type">
-                    <strong>Campus Type:</strong> Day Scholar / Semi-Residential Campus
-                </span>
-                <span class="campus-gender day">
-                    <i class="fa-solid fa-house"></i>
-                    Day / Semi-Residential
-                </span>
+                <span class="branch-campus"><i class="fa-solid fa-location-dot"></i> Boston Campus - ZUDIO BUILDING</span>
+                <span class="branch-type"><strong>Campus Type:</strong> Day Scholar / Semi-Residential Campus</span>
+                <span class="campus-gender day"><i class="fa-solid fa-house"></i> Day / Semi-Residential</span>
             </div>
 
         </div>
@@ -780,42 +709,22 @@ h1 {
 
     <!-- VIZAG -->
     <div class="location-group">
-
         <h3 class="location-heading">
-            <i class="fa-solid fa-location-dot"></i>
-            Vizag
+            <i class="fa-solid fa-location-dot"></i> Vizag
         </h3>
 
         <div class="branch-list">
 
             <div class="branch">
-                <span class="branch-campus">
-                    <i class="fa-solid fa-location-dot"></i>
-                    Harvard Campus - CARSHED JUNCTION
-                </span>
-                <span class="branch-type">
-                    <strong>Campus Type:</strong>
-                    Residential / Semi-Residential / Day Scholar Campus
-                </span>
-                <span class="campus-gender boys">
-                    <i class="fa-solid fa-person"></i>
-                    Boys Campus
-                </span>
+                <span class="branch-campus"><i class="fa-solid fa-location-dot"></i> Harvard Campus - CARSHED JUNCTION</span>
+                <span class="branch-type"><strong>Campus Type:</strong> Residential / Semi-Residential / Day Scholar Campus</span>
+                <span class="campus-gender boys"><i class="fa-solid fa-person"></i> Boys Campus</span>
             </div>
 
             <div class="branch">
-                <span class="branch-campus">
-                    <i class="fa-solid fa-location-dot"></i>
-                    Stanford Campus - CARSHED JUNCTION
-                </span>
-                <span class="branch-type">
-                    <strong>Campus Type:</strong>
-                    Residential / Semi-Residential / Day Scholar Campus
-                </span>
-                <span class="campus-gender girls">
-                    <i class="fa-solid fa-person-dress"></i>
-                    Girls Campus
-                </span>
+                <span class="branch-campus"><i class="fa-solid fa-location-dot"></i> Stanford Campus - CARSHED JUNCTION</span>
+                <span class="branch-type"><strong>Campus Type:</strong> Residential / Semi-Residential / Day Scholar Campus</span>
+                <span class="campus-gender girls"><i class="fa-solid fa-person-dress"></i> Girls Campus</span>
             </div>
 
         </div>
@@ -827,7 +736,6 @@ h1 {
 
 <!-- CONTACT INFORMATION -->
 <section aria-label="Contact information">
-
     <h2 class="section-title">Contact Us</h2>
 
     <div class="contact">
@@ -846,8 +754,7 @@ h1 {
 
         <div class="address-block">
             <span class="contact-label">
-                <i class="fa-solid fa-building"></i>
-                Registered Office:
+                <i class="fa-solid fa-building"></i> Registered Office:
             </span>
             <br>
             Unit No. 3A, Wing B, 2nd Floor,<br>
@@ -857,8 +764,7 @@ h1 {
 
         <div class="address-block">
             <span class="contact-label">
-                <i class="fa-solid fa-building"></i>
-                Corporate Office:
+                <i class="fa-solid fa-building"></i> Corporate Office:
             </span>
             <br>
             Sai Plaza, MIG 366, 4th Floor,<br>
