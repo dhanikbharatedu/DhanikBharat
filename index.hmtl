@@ -5,8 +5,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#ffffff">
-<meta name="description" content="Dhanik Bharat Educational Institutions — Admissions Open 2027-2028. Explore our campuses, official social media, and Parents App.">
-<title>Dhanik Bharat — Official Links</title>
+<meta name="description" content="Dhanik Bharat Educational Institutions - Admissions Open 2027-2028. Official links, campuses and Student / Parent App.">
+<title>Dhanik Bharat | Official Links</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,11 +17,16 @@
 :root {
     --green: #005b2b;
     --orange: #f45120;
-    --lime: #a5cd39;
     --text: #183047;
     --muted: #64748b;
     --light: #f7f9fc;
     --border: #e1e7ee;
+    --boys-bg: #e7f0ff;
+    --boys-text: #174ea6;
+    --girls-bg: #fff0f5;
+    --girls-text: #b42361;
+    --day-bg: #fff8e8;
+    --day-text: #8a5b00;
 }
 
 * {
@@ -30,7 +35,7 @@
 
 body {
     margin: 0;
-    padding: 28px 14px;
+    padding: 36px 24px;
     font-family: 'Poppins', sans-serif;
     color: var(--text);
     background: #f5f7f9;
@@ -38,13 +43,13 @@ body {
 
 .container {
     width: 100%;
-    max-width: 780px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 30px;
-    background: #ffffff;
+    padding: 40px;
+    background: #fff;
     border-radius: 28px;
     border-top: 8px solid var(--orange);
-    box-shadow: 0 14px 45px rgba(15, 23, 42, 0.08);
+    box-shadow: 0 14px 45px rgba(15, 23, 42, .08);
 }
 
 header {
@@ -62,9 +67,9 @@ header {
 
 h1 {
     margin: 0 0 5px;
+    color: var(--green);
     font-size: 32px;
     font-weight: 700;
-    color: var(--green);
 }
 
 .subtitle {
@@ -75,11 +80,11 @@ h1 {
 
 .cta {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     gap: 10px;
     width: 100%;
-    margin: 0 0 24px;
+    margin-bottom: 24px;
     padding: 17px 14px;
     border-radius: 18px;
     background: linear-gradient(100deg, #ff7417, #ffc914);
@@ -87,7 +92,7 @@ h1 {
     font-size: 19px;
     font-weight: 700;
     text-decoration: none;
-    box-shadow: 0 10px 25px rgba(244, 113, 24, 0.23);
+    box-shadow: 0 10px 25px rgba(244, 113, 24, .23);
     transition: transform .2s ease;
 }
 
@@ -97,7 +102,6 @@ h1 {
 
 .section-title {
     margin: 30px 0 14px;
-    text-align: left;
     color: var(--green);
     font-size: 21px;
     font-weight: 700;
@@ -107,13 +111,12 @@ h1 {
     margin: -6px 0 16px;
     color: var(--muted);
     font-size: 13px;
-    text-align: left;
 }
 
 .links {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
 }
 
 .link-btn {
@@ -146,22 +149,28 @@ h1 {
 
 .fa-globe { color: #1687d9; }
 .fa-facebook-f { color: #1877f2; }
+
 .fa-instagram {
     background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
 .fa-youtube { color: #ff0000; }
-.fa-x-twitter { color: #000000; }
+.fa-x-twitter { color: #000; }
 .fa-linkedin-in { color: #0a66c2; }
 .fa-whatsapp { color: #25d366; }
-.fa-bullhorn { color: #f45120; }
+.fa-bullhorn { color: var(--orange); }
 .fa-apple { color: #111827; }
 .fa-google-play { color: #18a058; }
-.fa-graduation-cap { color: var(--orange); }
-.fa-location-dot { color: #e34b4b; }
 
+.fa-graduation-cap,
+.fa-location-dot {
+    color: var(--orange);
+}
+
+/* Student / Parent App */
 .app-links {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -176,10 +185,10 @@ h1 {
     padding: 16px 12px;
     border-radius: 14px;
     background: var(--green);
-    color: #ffffff;
+    color: #fff;
     text-decoration: none;
-    font-weight: 600;
     font-size: 14px;
+    font-weight: 600;
     transition: opacity .2s ease;
 }
 
@@ -198,34 +207,111 @@ h1 {
     opacity: .9;
 }
 
-.branch-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
+/* Campus directory */
+.location-group {
+    margin-top: 24px;
 }
 
-.branch {
-    padding: 14px;
-    border: 1px solid var(--border);
-    border-radius: 13px;
-    background: #fbfcfd;
-    text-align: left;
-    overflow-wrap: anywhere;
-}
-
-.branch-name {
-    display: block;
-    margin-bottom: 4px;
+.location-heading {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0 0 14px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e8eee9;
     color: var(--green);
-    font-size: 14px;
+    font-size: 20px;
     font-weight: 700;
 }
 
+.location-heading i {
+    color: var(--orange);
+    font-size: 21px;
+}
+
+.branch-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.branch {
+    padding: 15px;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: #fbfcfd;
+    overflow-wrap: anywhere;
+    transition: border-color .2s ease, transform .2s ease;
+}
+
+.branch:hover {
+    border-color: #a5cd39;
+    transform: translateY(-1px);
+}
+
 .branch-campus {
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+    margin-bottom: 8px;
+    color: var(--green);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.6;
+}
+
+.branch-campus i {
+    flex: 0 0 15px;
+    margin-top: 4px;
+    color: var(--orange);
+    font-size: 14px;
+}
+
+.branch-type {
     display: block;
+    padding-left: 24px;
     color: #526174;
     font-size: 12px;
-    line-height: 1.6;
+    line-height: 1.75;
+}
+
+.branch-type strong {
+    color: var(--muted);
+    font-weight: 600;
+}
+
+/* Campus category highlights */
+.campus-gender {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin: 9px 0 0 24px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.campus-gender.boys {
+    background: var(--boys-bg);
+    color: var(--boys-text);
+    border: 1px solid #c6dafc;
+}
+
+.campus-gender.girls {
+    background: var(--girls-bg);
+    color: var(--girls-text);
+    border: 1px solid #f8c8dc;
+}
+
+.campus-gender.day {
+    background: var(--day-bg);
+    color: var(--day-text);
+    border: 1px solid #f1d99b;
+}
+
+.campus-gender i {
+    font-size: 12px;
 }
 
 .divider {
@@ -234,10 +320,10 @@ h1 {
     border-top: 1px solid var(--border);
 }
 
+/* Contact details */
 .contact {
     font-size: 14px;
     line-height: 1.8;
-    text-align: left;
     overflow-wrap: anywhere;
 }
 
@@ -264,6 +350,24 @@ h1 {
     font-size: 12px;
 }
 
+/* Tablet layout */
+@media (min-width: 521px) and (max-width: 900px) {
+    body {
+        padding: 24px 16px;
+    }
+
+    .container {
+        max-width: 900px;
+        padding: 30px;
+    }
+
+    .links,
+    .branch-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Mobile responsive layout */
 @media (max-width: 520px) {
     body {
         padding: 12px 8px;
@@ -291,22 +395,10 @@ h1 {
         font-size: 17px;
     }
 
-    .links {
-        grid-template-columns: 1fr;
-        gap: 10px;
-    }
-
-    .link-btn {
-        min-height: 54px;
-    }
-
-    .app-links {
-        grid-template-columns: 1fr;
-    }
-
+    .links,
+    .app-links,
     .branch-list {
         grid-template-columns: 1fr;
-        gap: 9px;
     }
 
     .section-title {
@@ -319,227 +411,467 @@ h1 {
 <body>
 <main class="container">
 
-    <header>
-        <!-- Keep your Dhanik Bharat logo in the repository as logo.png -->
-        <img src="logo.png" alt="Dhanik Bharat Educational Institutions Logo"
-             class="logo">
+<!-- HEADER -->
+<header>
+    <img
+        src="logo.png"
+        alt="Dhanik Bharat Educational Institutions Logo"
+        class="logo"
+    >
 
-        <h1>Dhanik Bharat</h1>
-        <p class="subtitle">Educational Institutions • Official Links</p>
-    </header>
+    <h1>Dhanik Bharat</h1>
+    <p class="subtitle">Educational Institutions • Official Links</p>
+</header>
 
-    <a class="cta" href="https://dhanikbharat.org/#enquiry-form">
-        <i class="fa-solid fa-graduation-cap"></i>
-        Admissions Open 2027–2028
-    </a>
+<!-- ADMISSIONS CTA -->
+<a class="cta" href="https://dhanikbharat.org/#enquiry-form">
+    <i class="fa-solid fa-graduation-cap"></i>
+    Admissions Open 2027–2028
+</a>
 
-    <section aria-label="Official social media links">
-        <h2 class="section-title">Connect With Us</h2>
+<!-- OFFICIAL SOCIAL MEDIA LINKS -->
+<section aria-label="Official social media links">
+    <h2 class="section-title">Connect With Us</h2>
 
-        <div class="links">
-            <a class="link-btn" href="https://dhanikbharat.org/"
-               target="_blank" rel="noopener noreferrer">
-                <i class="fa-solid fa-globe"></i> Visit Website
-            </a>
+    <div class="links">
 
-            <a class="link-btn"
-               href="https://www.facebook.com/profile.php?id=61584293831919"
-               target="_blank" rel="noopener noreferrer">
-                <i class="fa-brands fa-facebook-f"></i> Facebook
-            </a>
+        <a class="link-btn"
+           href="https://dhanikbharat.org/"
+           target="_blank" rel="noopener noreferrer">
+            <i class="fa-solid fa-globe"></i>
+            Visit Website
+        </a>
 
-            <!-- Replace with the official Instagram profile URL -->
-            <a class="link-btn" href="YOUR_INSTAGRAM_PROFILE_URL"
-               target="_blank" rel="noopener noreferrer">
-                <i class="fa-brands fa-instagram"></i> Instagram
-            </a>
+        <a class="link-btn"
+           href="https://www.facebook.com/profile.php?id=61584293831919"
+           target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-facebook-f"></i>
+            Facebook
+        </a>
 
-            <a class="link-btn"
-               href="https://www.youtube.com/@dhanikbharat-edu"
-               target="_blank" rel="noopener noreferrer">
-                <i class="fa-brands fa-youtube"></i> YouTube
-            </a>
+        <a class="link-btn"
+           href="https://www.instagram.com/dhanikbharatedu/?hl=en"
+           target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-instagram"></i>
+            Instagram
+        </a>
 
-            <a class="link-btn" href="https://x.com/dhanikbharatedu"
-               target="_blank" rel="noopener noreferrer">
-                <i class="fa-brands fa-x-twitter"></i> Twitter (X)
-            </a>
+        <a class="link-btn"
+           href="https://www.youtube.com/@dhanikbharat-edu"
+           target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-youtube"></i>
+            YouTube
+        </a>
 
-            <a class="link-btn"
-               href="https://www.linkedin.com/company/dhanikbharat/"
-               target="_blank" rel="noopener noreferrer">
-                <i class="fa-brands fa-linkedin-in"></i> LinkedIn
-            </a>
+        <a class="link-btn"
+           href="https://x.com/dhanikbharatedu"
+           target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-x-twitter"></i>
+            Twitter (X)
+        </a>
 
-            <a class="link-btn"
-               href="https://api.whatsapp.com/send/?phone=919555825559"
-               target="_blank" rel="noopener noreferrer">
-                <i class="fa-brands fa-whatsapp"></i> WhatsApp Support
-            </a>
+        <a class="link-btn"
+           href="https://www.linkedin.com/company/dhanikbharat/"
+           target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-linkedin-in"></i>
+            LinkedIn
+        </a>
 
-            <!-- Replace with your real WhatsApp Channel URL -->
-            <a class="link-btn" href="YOUR_WHATSAPP_CHANNEL_URL"
-               target="_blank" rel="noopener noreferrer">
-                <i class="fa-solid fa-bullhorn"></i> WhatsApp Channel
-            </a>
-        </div>
-    </section>
+        <a class="link-btn"
+           href="https://api.whatsapp.com/send/?phone=919555825559"
+           target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-whatsapp"></i>
+            WhatsApp Support
+        </a>
 
-    <section aria-label="Parents application downloads">
-        <h2 class="section-title">Parents App</h2>
-        <p class="section-description">
-            Access the Dhanik Bharat Parents App on your device.
-        </p>
+        <a class="link-btn"
+           href="https://whatsapp.com/channel/0029Vb75B9Y5kg72eCv86T0Z"
+           target="_blank" rel="noopener noreferrer">
+            <i class="fa-solid fa-bullhorn"></i>
+            WhatsApp Channel
+        </a>
 
-        <div class="app-links">
-            <a class="app-btn"
-               href="https://apps.apple.com/us/app/dhanik-bharat-institutions/id6770435192"
-               target="_blank" rel="noopener noreferrer">
-                <i class="fa-brands fa-apple"></i>
-                <span><small>DOWNLOAD ON THE</small>App Store (iOS)</span>
-            </a>
+    </div>
+</section>
 
-            <a class="app-btn"
-               href="https://play.google.com/store/apps/details?id=com.mcb.dhanikbharateducationalsociety"
-               target="_blank" rel="noopener noreferrer">
-                <i class="fa-brands fa-google-play"></i>
-                <span><small>GET IT ON</small>Google Play (Android)</span>
-            </a>
-        </div>
-    </section>
+<!-- STUDENT / PARENT APP -->
+<section aria-label="Student and Parent App">
 
-    <section aria-label="Dhanik Bharat campus directory">
-        <h2 class="section-title">Our Branches</h2>
-        <p class="section-description">
-            Explore our campuses across Hyderabad, Guntur, Vijayawada and Vizag.
-        </p>
+    <h2 class="section-title">Student / Parent App</h2>
+
+    <p class="section-description">
+        Access the Dhanik Bharat Student / Parent App on your device.
+    </p>
+
+    <div class="app-links">
+
+        <a class="app-btn"
+           href="https://apps.apple.com/us/app/dhanik-bharat-institutions/id6770435192"
+           target="_blank" rel="noopener noreferrer">
+
+            <i class="fa-brands fa-apple"></i>
+
+            <span>
+                <small>DOWNLOAD ON THE</small>
+                App Store (iOS)
+            </span>
+        </a>
+
+        <a class="app-btn"
+           href="https://play.google.com/store/apps/details?id=com.mcb.dhanikbharateducationalsociety"
+           target="_blank" rel="noopener noreferrer">
+
+            <i class="fa-brands fa-google-play"></i>
+
+            <span>
+                <small>GET IT ON</small>
+                Google Play (Android)
+            </span>
+        </a>
+
+    </div>
+</section>
+
+<!-- CAMPUS DIRECTORY -->
+<section aria-label="Dhanik Bharat campus directory">
+
+    <h2 class="section-title">Our Branches</h2>
+
+    <p class="section-description">
+        Explore our campuses across Hyderabad, Vijayawada, Guntur and Vizag.
+    </p>
+
+    <!-- HYDERABAD -->
+    <div class="location-group">
+
+        <h3 class="location-heading">
+            <i class="fa-solid fa-location-dot"></i>
+            Hyderabad
+        </h3>
 
         <div class="branch-list">
+
             <div class="branch">
-                <span class="branch-name">Bonguluru Boys</span>
-                <span class="branch-campus">Caltech Campus - Hyderabad</span>
+                <span class="branch-campus">
+                    <i class="fa-solid fa-location-dot"></i>
+                    Harvard Campus - MADHAPUR
+                </span>
+                <span class="branch-type">
+                    <strong>Campus Type:</strong> Residential Campus
+                </span>
+                <span class="campus-gender boys">
+                    <i class="fa-solid fa-person"></i>
+                    Boys Campus
+                </span>
             </div>
 
             <div class="branch">
-                <span class="branch-name">LB Nagar</span>
-                <span class="branch-campus">Cornell Campus - Hyderabad</span>
+                <span class="branch-campus">
+                    <i class="fa-solid fa-location-dot"></i>
+                    MIT Campus - MADHAPUR
+                </span>
+                <span class="branch-type">
+                    <strong>Campus Type:</strong> Residential Campus
+                </span>
+                <span class="campus-gender boys">
+                    <i class="fa-solid fa-person"></i>
+                    Boys Campus
+                </span>
             </div>
 
             <div class="branch">
-                <span class="branch-name">Kukatpally</span>
-                <span class="branch-campus">Michigan Campus - Hyderabad</span>
+                <span class="branch-campus">
+                    <i class="fa-solid fa-location-dot"></i>
+                    Caltech Campus - BONGULURU
+                </span>
+                <span class="branch-type">
+                    <strong>Campus Type:</strong> Residential Campus
+                </span>
+                <span class="campus-gender boys">
+                    <i class="fa-solid fa-person"></i>
+                    Boys Campus
+                </span>
             </div>
 
             <div class="branch">
-                <span class="branch-name">Madapur Boys</span>
-                <span class="branch-campus">Harvard Campus - Hyderabad</span>
+                <span class="branch-campus">
+                    <i class="fa-solid fa-location-dot"></i>
+                    Stanford Campus - MADHAPUR
+                </span>
+                <span class="branch-type">
+                    <strong>Campus Type:</strong> Residential Campus
+                </span>
+                <span class="campus-gender girls">
+                    <i class="fa-solid fa-person-dress"></i>
+                    Girls Campus
+                </span>
             </div>
 
             <div class="branch">
-                <span class="branch-name">Madhapur Boys</span>
-                <span class="branch-campus">MIT Campus - Hyderabad</span>
+                <span class="branch-campus">
+                    <i class="fa-solid fa-location-dot"></i>
+                    Boston Campus - MADINAGUDA
+                </span>
+                <span class="branch-type">
+                    <strong>Campus Type:</strong> Day Scholar Campus
+                </span>
+                <span class="campus-gender day">
+                    <i class="fa-solid fa-sun"></i>
+                    Day Scholar
+                </span>
             </div>
 
             <div class="branch">
-                <span class="branch-name">Madhapur Girls</span>
-                <span class="branch-campus">Stanford Campus - Hyderabad</span>
+                <span class="branch-campus">
+                    <i class="fa-solid fa-location-dot"></i>
+                    Michigan Campus - KUKATPALLY
+                </span>
+                <span class="branch-type">
+                    <strong>Campus Type:</strong> Day Scholar Campus
+                </span>
+                <span class="campus-gender day">
+                    <i class="fa-solid fa-sun"></i>
+                    Day Scholar
+                </span>
             </div>
 
             <div class="branch">
-                <span class="branch-name">Madinaguda</span>
-                <span class="branch-campus">Boston Campus - Hyderabad</span>
+                <span class="branch-campus">
+                    <i class="fa-solid fa-location-dot"></i>
+                    Cornell Campus - LBNAGAR
+                </span>
+                <span class="branch-type">
+                    <strong>Campus Type:</strong> Day Scholar / Semi-Residential Campus
+                </span>
+                <span class="campus-gender day">
+                    <i class="fa-solid fa-house"></i>
+                    Day / Semi-Residential
+                </span>
             </div>
 
-            <div class="branch">
-                <span class="branch-name">Guntur Boys</span>
-                <span class="branch-campus">Harvard Campus - Guntur</span>
-            </div>
-
-            <div class="branch">
-                <span class="branch-name">Guntur Girls</span>
-                <span class="branch-campus">Stanford Campus - Guntur</span>
-            </div>
-
-            <div class="branch">
-                <span class="branch-name">Zudio</span>
-                <span class="branch-campus">Boston Campus - Guntur</span>
-            </div>
-
-            <div class="branch">
-                <span class="branch-name">Guntur Girls</span>
-                <span class="branch-campus">Queensland - Guntur</span>
-            </div>
-
-            <div class="branch">
-                <span class="branch-name">Labippet</span>
-                <span class="branch-campus">Boston Campus - Vijayawada</span>
-            </div>
-
-            <div class="branch">
-                <span class="branch-name">Vijayawada Boys</span>
-                <span class="branch-campus">Harvard Campus - Vijayawada</span>
-            </div>
-
-            <div class="branch">
-                <span class="branch-name">Vijayawada Girls</span>
-                <span class="branch-campus">Stanford Campus - Vijayawada</span>
-            </div>
-
-            <div class="branch">
-                <span class="branch-name">Vizag Boys</span>
-                <span class="branch-campus">Harvard Campus - Vizag</span>
-            </div>
-
-            <div class="branch">
-                <span class="branch-name">Vizag Girls</span>
-                <span class="branch-campus">Stanford Campus - Vizag</span>
-            </div>
         </div>
-    </section>
+    </div>
 
-    <hr class="divider">
+    <!-- VIJAYAWADA -->
+    <div class="location-group">
 
-    <section aria-label="Contact information">
-        <h2 class="section-title">Contact Us</h2>
+        <h3 class="location-heading">
+            <i class="fa-solid fa-location-dot"></i>
+            Vijayawada
+        </h3>
 
-        <div class="contact">
-            <div>
-                <i class="fa-solid fa-envelope" style="color:#f45120"></i>
-                <span class="contact-label">Email:</span>
-                <a href="mailto:care@dhanikbharat.org">care@dhanikbharat.org</a>
+        <div class="branch-list">
+
+            <div class="branch">
+                <span class="branch-campus">
+                    <i class="fa-solid fa-location-dot"></i>
+                    Harvard Campus - RAMAVARAPADU
+                </span>
+                <span class="branch-type">
+                    <strong>Campus Type:</strong>
+                    Residential / Semi-Residential / Day Scholar Campus
+                </span>
+                <span class="campus-gender boys">
+                    <i class="fa-solid fa-person"></i>
+                    Boys Campus
+                </span>
             </div>
 
-            <div>
-                <i class="fa-solid fa-phone" style="color:#e34b76"></i>
-                <span class="contact-label">Phone:</span>
-                <a href="tel:+919555825559">+91 955582 5559</a>
+            <div class="branch">
+                <span class="branch-campus">
+                    <i class="fa-solid fa-location-dot"></i>
+                    Stanford Campus - RAMAVARAPADU
+                </span>
+                <span class="branch-type">
+                    <strong>Campus Type:</strong>
+                    Residential / Semi-Residential / Day Scholar Campus
+                </span>
+                <span class="campus-gender girls">
+                    <i class="fa-solid fa-person-dress"></i>
+                    Girls Campus
+                </span>
             </div>
 
-            <div class="address-block">
-                <span class="contact-label">
-                    <i class="fa-solid fa-building"></i>
-                    Registered Office:
-                </span><br>
-                Unit No. 3A, Wing B, 2nd Floor,<br>
-                Times Square, Marol, Andheri (East),<br>
-                Mumbai – 400059
+            <div class="branch">
+                <span class="branch-campus">
+                    <i class="fa-solid fa-location-dot"></i>
+                    Boston Campus - LABBIPET
+                </span>
+                <span class="branch-type">
+                    <strong>Campus Type:</strong> Day Scholar / Semi-Residential Campus
+                </span>
+                <span class="campus-gender day">
+                    <i class="fa-solid fa-house"></i>
+                    Day / Semi-Residential
+                </span>
             </div>
 
-            <div class="address-block">
-                <span class="contact-label">
-                    <i class="fa-solid fa-building"></i>
-                    Corporate Office:
-                </span><br>
-                Sai Plaza, MIG 366, 4th Floor,<br>
-                KPHB Colony, Kukatpally,<br>
-                Hyderabad, Telangana – 500072
-            </div>
         </div>
-    </section>
+    </div>
 
-    <footer class="footer">
-        © 2027–2028 Dhanik Bharat Educational Institutions. All rights reserved.
-    </footer>
+    <!-- GUNTUR -->
+    <div class="location-group">
+
+        <h3 class="location-heading">
+            <i class="fa-solid fa-location-dot"></i>
+            Guntur
+        </h3>
+
+        <div class="branch-list">
+
+            <div class="branch">
+                <span class="branch-campus">
+                    <i class="fa-solid fa-location-dot"></i>
+                    Harvard Campus - PEDDAPALAKLURU
+                </span>
+                <span class="branch-type">
+                    <strong>Campus Type:</strong> Residential Campus
+                </span>
+                <span class="campus-gender boys">
+                    <i class="fa-solid fa-person"></i>
+                    Boys Campus
+                </span>
+            </div>
+
+            <div class="branch">
+                <span class="branch-campus">
+                    <i class="fa-solid fa-location-dot"></i>
+                    Stanford Campus - REDDY PALEM
+                </span>
+                <span class="branch-type">
+                    <strong>Campus Type:</strong> Residential Campus
+                </span>
+                <span class="campus-gender girls">
+                    <i class="fa-solid fa-person-dress"></i>
+                    Girls Campus
+                </span>
+            </div>
+
+            <div class="branch">
+                <span class="branch-campus">
+                    <i class="fa-solid fa-location-dot"></i>
+                    Queensland - ASHOKNAGAR
+                </span>
+                <span class="branch-type">
+                    <strong>Campus Type:</strong> Residential Campus
+                </span>
+                <span class="campus-gender girls">
+                    <i class="fa-solid fa-person-dress"></i>
+                    Girls Campus
+                </span>
+            </div>
+
+            <div class="branch">
+                <span class="branch-campus">
+                    <i class="fa-solid fa-location-dot"></i>
+                    Boston Campus - ZUDIO BUILDING
+                </span>
+                <span class="branch-type">
+                    <strong>Campus Type:</strong> Day Scholar / Semi-Residential Campus
+                </span>
+                <span class="campus-gender day">
+                    <i class="fa-solid fa-house"></i>
+                    Day / Semi-Residential
+                </span>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- VIZAG -->
+    <div class="location-group">
+
+        <h3 class="location-heading">
+            <i class="fa-solid fa-location-dot"></i>
+            Vizag
+        </h3>
+
+        <div class="branch-list">
+
+            <div class="branch">
+                <span class="branch-campus">
+                    <i class="fa-solid fa-location-dot"></i>
+                    Harvard Campus - CARSHED JUNCTION
+                </span>
+                <span class="branch-type">
+                    <strong>Campus Type:</strong>
+                    Residential / Semi-Residential / Day Scholar Campus
+                </span>
+                <span class="campus-gender boys">
+                    <i class="fa-solid fa-person"></i>
+                    Boys Campus
+                </span>
+            </div>
+
+            <div class="branch">
+                <span class="branch-campus">
+                    <i class="fa-solid fa-location-dot"></i>
+                    Stanford Campus - CARSHED JUNCTION
+                </span>
+                <span class="branch-type">
+                    <strong>Campus Type:</strong>
+                    Residential / Semi-Residential / Day Scholar Campus
+                </span>
+                <span class="campus-gender girls">
+                    <i class="fa-solid fa-person-dress"></i>
+                    Girls Campus
+                </span>
+            </div>
+
+        </div>
+    </div>
+
+</section>
+
+<hr class="divider">
+
+<!-- CONTACT INFORMATION -->
+<section aria-label="Contact information">
+
+    <h2 class="section-title">Contact Us</h2>
+
+    <div class="contact">
+
+        <div>
+            <i class="fa-solid fa-envelope" style="color:#f45120"></i>
+            <span class="contact-label">Email:</span>
+            <a href="mailto:info@dhanikbharat.org">info@dhanikbharat.org</a>
+        </div>
+
+        <div>
+            <i class="fa-solid fa-phone" style="color:#e34b76"></i>
+            <span class="contact-label">Phone:</span>
+            <a href="tel:+919555825559">+91 955582 5559</a>
+        </div>
+
+        <div class="address-block">
+            <span class="contact-label">
+                <i class="fa-solid fa-building"></i>
+                Registered Office:
+            </span>
+            <br>
+            Unit No. 3A, Wing B, 2nd Floor,<br>
+            Times Square, Marol, Andheri (East),<br>
+            Mumbai – 400059
+        </div>
+
+        <div class="address-block">
+            <span class="contact-label">
+                <i class="fa-solid fa-building"></i>
+                Corporate Office:
+            </span>
+            <br>
+            Sai Plaza, MIG 366, 4th Floor,<br>
+            KPHB Colony, Kukatpally,<br>
+            Hyderabad, Telangana – 500072
+        </div>
+
+    </div>
+</section>
+
+<footer class="footer">
+    © 2027–2028 Dhanik Bharat Educational Institutions. All rights reserved.
+</footer>
 
 </main>
 </body>
